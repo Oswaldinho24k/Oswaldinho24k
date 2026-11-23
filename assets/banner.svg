@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Oswaldo Martínez: building AI-native apps">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F1B3D"/>
+      <stop offset="1" stop-color="#1B2F6B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.35" r="0.5">
+      <stop offset="0" stop-color="#3B65F6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#3B65F6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+    <style>
+      .name { font: 800 64px 'Manrope','Segoe UI',Helvetica,Arial,sans-serif; fill:#fff; letter-spacing:-1.5px }
+      .tag  { font: 500 24px 'Manrope','Segoe UI',Helvetica,Arial,sans-serif; fill:#C9D6FF }
+      .chip { font: 600 15px 'Manrope','Segoe UI',Helvetica,Arial,sans-serif; fill:#fff }
+      .ball { animation: arc 3.2s cubic-bezier(.45,0,.55,1) infinite alternate }
+      .shadow { animation: shrink 3.2s cubic-bezier(.45,0,.55,1) infinite alternate; transform-origin: 960px 262px }
+      .pulse { animation: pulse 2.4s ease-in-out infinite }
+      @keyframes arc {
+        0%   { transform: translate(0px, 0px) }
+        50%  { transform: translate(90px, -120px) }
+        100% { transform: translate(180px, 0px) }
+      }
+      @keyframes shrink {
+        0%,100% { transform: translateX(0) scale(1); opacity:.35 }
+        50%     { transform: translateX(90px) scale(.55); opacity:.15 }
+      }
+      @keyframes pulse { 0%,100% { opacity:.35 } 50% { opacity:1 } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="20" fill="url(#dots)"/>
+  <rect width="1200" height="320" rx="20" fill="url(#glow)"/>
+
+  <!-- padel court (top-down, perspective-free) -->
+  <g transform="translate(860 70)" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2">
+    <rect width="300" height="190" rx="6"/>
+    <line x1="150" y1="0" x2="150" y2="190" stroke-opacity="0.55" stroke-dasharray="4 5"/>
+    <line x1="50" y1="0" x2="50" y2="190"/>
+    <line x1="250" y1="0" x2="250" y2="190"/>
+    <line x1="50" y1="95" x2="250" y2="95"/>
+  </g>
+
+  <!-- bouncing ball -->
+  <ellipse class="shadow" cx="900" cy="262" rx="14" ry="4" fill="#000"/>
+  <g class="ball">
+    <circle cx="900" cy="240" r="13" fill="#D7F34A"/>
+    <path d="M889 233 q11 7 0 15 M911 233 q-11 7 0 15" stroke="#fff" stroke-width="1.6" fill="none" stroke-opacity=".8"/>
+  </g>
+
+  <!-- text -->
+  <text x="64" y="128" class="name">Oswaldo Martínez</text>
+  <text x="66" y="172" class="tag">Software engineer · building AI-native apps</text>
+
+  <!-- chips -->
+  <g transform="translate(64 214)">
+    <rect width="172" height="36" rx="18" fill="#3B65F6"/>
+    <circle class="pulse" cx="20" cy="18" r="5" fill="#D7F34A"/>
+    <text x="34" y="23" class="chip">10 yrs shipping</text>
+
+    <rect x="186" width="142" height="36" rx="18" fill="#ffffff" fill-opacity=".1" stroke="#ffffff" stroke-opacity=".25"/>
+    <text x="206" y="23" class="chip">ES · EN · PT</text>
+
+    <rect x="342" width="132" height="36" rx="18" fill="#ffffff" fill-opacity=".1" stroke="#ffffff" stroke-opacity=".25"/>
+    <text x="360" y="23" class="chip">🇲🇽 Mexico</text>
+  </g>
+</svg>
